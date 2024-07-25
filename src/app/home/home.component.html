@@ -1,0 +1,57 @@
+<app-loading *ngIf="isLoading"></app-loading>
+<div
+  class="p-5 justify-content-center d-flex flex-column bg-black text-white border border-opacity border-white"
+  *ngIf="!isLoading"
+>
+  <h2 class="title-font text-center gap-4 p-3">
+    Welcome to My Star Wars Showcase - Fenri Mintardja
+  </h2>
+  <h2 class="title-font text-center gap-4 p-3">Enjoy Your Visit</h2>
+  <h2 class="title-font text-center gap-4 p-3">
+    Click the Image Below For More Information!
+  </h2>
+  <div class="row h-100 w-100 p-5 m-0">
+    <!-- <div class="col-lg-12 d-flex flex-column justify-content-center">
+    </div> -->
+    <div
+      *ngFor="let people of starPeopleData; let i = index"
+      class="col-lg-3 p-5 text-center d-flex flex-column justify-content-center align-content-center flex-wrap gap-4"
+      [ngClass]="[i == 8 ? 'offset-lg-3' : '']"
+    >
+      <img
+        src="assets/images/character/{{ people.name }}.jpg"
+        alt="Logo image"
+        class="charImage"
+        routerLink="/detail/{{ (currentPage - 1) * 10 + i + 1 }}"
+      />
+      <p class="font-character">{{ people.name.toLowerCase() }}</p>
+    </div>
+  </div>
+  <nav aria-label="...">
+    <ul class="pagination justify-content-center p-5">
+      <li class="page-item">
+        <a
+          class="page-link"
+          href="#"
+          (click)="setPage(currentPage == 1 ? totalPage : currentPage - 1)"
+          >Previous</a
+        >
+      </li>
+      <li
+        class="page-item"
+        [class.active]="currentPage === page"
+        *ngFor="let page of pages"
+      >
+        <a class="page-link" href="#" (click)="setPage(page)">{{ page }}</a>
+      </li>
+      <li class="page-item">
+        <a
+          class="page-link"
+          href="#"
+          (click)="setPage(currentPage + 1 > totalPage ? 1 : currentPage + 1)"
+          >Next</a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>

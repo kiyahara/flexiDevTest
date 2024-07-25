@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.title-font {
+  font-family: "StarJedi", sans-serif !important;
+  color: #fade2b !important;
+}
+
+.border-opacity {
+  --bs-border-opacity: 0.5 !important;
+}
+
+@font-face {
+  font-family: "StarJedi";
+  src: url("assets/fonts/Starjedi.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

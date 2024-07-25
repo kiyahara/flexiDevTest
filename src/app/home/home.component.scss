@@ -1,0 +1,38 @@
+.pagination .page-item.active .page-link {
+  background-color: black;
+  border-color: white;
+  color: white;
+
+  &:focus {
+    box-shadow: white !important;
+  }
+}
+
+.pagination .page-link {
+  color: black;
+}
+
+.pagination .page-link:hover {
+  background-color: white;
+  color: black;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+}
+
+.charImage {
+  height: 30vh;
+  width: 30vh;
+  cursor: pointer;
+}
+
+.font-character {
+  font-family: "StarJedi", sans-serif !important;
+  font-size: 20px;
+  color: white !important;
+}
+
+// .title-font {
+//   font-size: 20px;
+// }
