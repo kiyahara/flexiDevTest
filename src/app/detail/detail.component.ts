@@ -5,7 +5,7 @@ import { DetailFilmData, DetailPeopleData } from '../../types';
 import { CommonModule } from '@angular/common';
 import { LoadingComponent } from '../components/loading/loading.component';
 
-interface PersonalDataInterface {
+interface CharacterPersonalDataInterface {
   name?: string;
   call?: string | string[];
 }
@@ -43,7 +43,7 @@ export class DetailComponent implements OnInit {
     vehicles: [],
   };
 
-  personalData: PersonalDataInterface[] = [];
+  personalData: CharacterPersonalDataInterface[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -64,8 +64,8 @@ export class DetailComponent implements OnInit {
           this.peopleDetail = data;
           this.personalData = [
             { name: 'Birth Year', call: this.peopleDetail.birth_year },
-            { name: 'Height', call: String(this.peopleDetail.height) },
-            { name: 'Mass', call: String(this.peopleDetail.mass) },
+            { name: 'Height', call: String(this.peopleDetail.height + ' Cm') },
+            { name: 'Mass', call: String(this.peopleDetail.mass + ' lb') },
             { name: 'Hair Color', call: this.peopleDetail.hair_color },
             { name: 'Eye Color', call: this.peopleDetail.eye_color },
             { name: 'films', call: [] },

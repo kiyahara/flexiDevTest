@@ -5,13 +5,43 @@
   <div
     class="d-flex flex-row gap-4 text-center justify-content-between mt-4 w-100"
   >
-    <div></div>
+    <div class="d-flex flex-column pb-5 font-name">
+      <h2>Here Some of My Active Account:</h2>
+      <div class="d-flex flex-row justify-content-center gap-4">
+        <a
+          href="https://github.com/kiyahara/flexiDevTest"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-github-square icon"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/fenri.mintardja"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a
+          href="https://x.com/Fenri_M"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/fenri-mintardja-2853b0151/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </div>
     <img src="assets/images/header.svg" alt="Logo image" class="logo" />
-    <div></div>
+    <div class="d-flex flex-column pb-5 font-name">
+      <h2>Welcome Back, Fenri Mintardja</h2>
+    </div>
   </div>
   <!-- Navigation -->
   <div
-    class="d-flex flex-row gap-4 text-center justify-content-center mt-2 pb-3"
+    class="navigation d-flex flex-row gap-4 text-center justify-content-center mt-2 pb-3"
   >
     <a
       routerLink="/"
@@ -19,6 +49,6 @@
       [routerLinkActiveOptions]="{ exact: true }"
       >Home</a
     >
-    <a routerLink="/aboutMe" routerLinkActive="active">About</a>
+    <a routerLink="/aboutMe" routerLinkActive="active">About Me</a>
   </div>
 </header>
